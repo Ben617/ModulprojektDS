@@ -10,8 +10,11 @@ from src.evaluation import compute_metrics, relations_to_tuples
 import json
 from pathlib import Path
 
-def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None) -> None:
+def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None, limit: int | None) -> None:
     documents = load_documents(input_path)
+
+    if limit is not None:
+        documents = documents[:limit]
     llm = create_llm(backend, model)
 
     predictions = []
@@ -71,6 +74,7 @@ def main() -> None:
     parser.add_argument("--backend", default="mock", choices=["mock", "vllm"])
     parser.add_argument("--model", default=None)
     parser.add_argument("--gold", default=None)
+    parser.add_argument("--limit", type=int, default=None)
     args = parser.parse_args()
 
     run(
@@ -79,6 +83,7 @@ def main() -> None:
         backend=args.backend,
         model=args.model,
         gold_path=args.gold,
+        limit=args.limit,
     )
 
 
