@@ -1,0 +1,12 @@
+[
+  {
+    "document_id": "sample_001",
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "MARRIED_TO"
+      }
+    ]
+  }
+]
