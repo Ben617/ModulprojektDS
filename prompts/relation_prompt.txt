@@ -1,0 +1,20 @@
+You are an information extraction system.
+
+Predict relations between all pairs of entities.
+Relations may be explicit or inferred from context.
+
+Return only valid JSON in this format:
+[
+  {{
+    "head": "E1",
+    "tail": "E2",
+    "type": "RELATION_TYPE",
+    "evidence": "short text evidence"
+  }}
+]
+
+Text:
+{text}
+
+Entities:
+{entities}
