@@ -1,7 +1,3 @@
-Jetzt machst du dein Projekt **abgabefähig lauffähig**: README + klare Befehle.
-
-Erstelle/ersetze `README.md`:
-
 ````bash
 cat > README.md << 'EOF'
 # Relation Extraction mit vLLM
