@@ -1,0 +1,83 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# VS Code / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Data files (optional – je nach Projekt)
+data/raw/
+data/processed/
+*.jsonl
+*.csv
+*.tsv
+
+# Outputs
+outputs/
+results/
+predictions/
+
+# Models / checkpoints
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Hugging Face / Transformers cache
+.cache/huggingface/
+.huggingface/
+
+# vLLM / CUDA temp files
+*.nv
+*.cuda
+*.cubin
+
+# dotenv
+.env.*
+
+# Coverage
+.coverage
+htmlcov/
+
+# Misc
+*.bak
+*.tmp
