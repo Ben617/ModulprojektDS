@@ -1,7 +1,7 @@
 import json
 
 from src.schemas import Document, Entity
-
+from src.json_utils import parse_json_array
 
 from src.prompts import build_ner_prompt
 
@@ -9,7 +9,7 @@ def extract_entities(document: Document, llm) -> list[Entity]:
     prompt = build_ner_prompt(document.text)
 
     raw_output = llm.generate(prompt)
-    data = json.loads(raw_output)
+    data = parse_json_array(raw_output)
 
     return [
         Entity(

@@ -2,6 +2,7 @@ import json
 
 from src.schemas import Document, Entity, Relation
 from src.prompts import build_relation_prompt
+from src.json_utils import parse_json_array
 
 def extract_relations(document: Document, entities: list[Entity], llm) -> list[Relation]:
     entity_text = json.dumps(
@@ -13,7 +14,7 @@ def extract_relations(document: Document, entities: list[Entity], llm) -> list[R
     prompt = build_relation_prompt(document.text, entity_text)
 
     raw_output = llm.generate(prompt)
-    data = json.loads(raw_output)
+    data = parse_json_array(raw_output)
 
     return [
         Relation(
