@@ -22,3 +22,30 @@ class MockLLM:
 """
 
         return "[]"
+
+
+class VLLM:
+    def __init__(self, model_name: str):
+        from vllm import LLM, SamplingParams
+
+        self.llm = LLM(model=model_name)
+        self.sampling_params = SamplingParams(
+            temperature=0.0,
+            max_tokens=512,
+        )
+
+    def generate(self, prompt: str) -> str:
+        outputs = self.llm.generate([prompt], self.sampling_params)
+        return outputs[0].outputs[0].text
+
+
+def create_llm(backend: str, model_name: str | None = None):
+    if backend == "mock":
+        return MockLLM()
+
+    if backend == "vllm":
+        if not model_name:
+            raise ValueError("model_name is required when backend='vllm'")
+        return VLLM(model_name)
+
+    raise ValueError(f"Unknown backend: {backend}")
