@@ -5,7 +5,7 @@ from src.entities import extract_entities
 from src.llm import create_llm
 from src.relations import extract_relations
 from src.schemas import Prediction
-
+from tqdm import tqdm
 
 def run(input_path: str, output_path: str, backend: str, model: str | None) -> None:
     documents = load_documents(input_path)
@@ -13,7 +13,7 @@ def run(input_path: str, output_path: str, backend: str, model: str | None) -> N
 
     predictions = []
 
-    for document in documents:
+    for document in tqdm(documents, desc="Processing documents"):
         entities = extract_entities(document, llm)
         relations = extract_relations(document, entities, llm)
 
