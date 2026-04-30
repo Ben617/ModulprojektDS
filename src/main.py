@@ -10,7 +10,7 @@ from src.evaluation import compute_metrics, relations_to_tuples
 import json
 from pathlib import Path
 
-def run(input_path: str, output_path: str, backend: str, model: str | None) -> None:
+def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None) -> None:
     documents = load_documents(input_path)
     llm = create_llm(backend, model)
 
@@ -32,28 +32,36 @@ def run(input_path: str, output_path: str, backend: str, model: str | None) -> N
     save_predictions(predictions, output_path)
 
     # OPTIONAL EVALUATION
-    gold_path = "data/gold_sample.json"
+    if gold_path:
+        from src.evaluation import compute_metrics, relations_to_tuples
+        import json
+        from pathlib import Path
 
-    if Path(gold_path).exists():
-        gold_data = json.loads(Path(gold_path).read_text())
+        if not Path(gold_path).exists():
+            print(f"[WARN] Gold file not found: {gold_path}")
+        else:
+            gold_data = json.loads(Path(gold_path).read_text())
 
-        pred_map = {p["document_id"]: p for p in predictions}
-        gold_map = {g["document_id"]: g for g in gold_data}
+            pred_map = {p["document_id"]: p for p in predictions}
+            gold_map = {g["document_id"]: g for g in gold_data}
 
-        all_pred = []
-        all_gold = []
+            all_pred = []
+            all_gold = []
 
-        for doc_id in gold_map:
-            pred_rel = relations_to_tuples(pred_map[doc_id]["relations"])
-            gold_rel = relations_to_tuples(gold_map[doc_id]["relations"])
+            for doc_id in gold_map:
+                if doc_id not in pred_map:
+                    continue
 
-            all_pred.extend(pred_rel)
-            all_gold.extend(gold_rel)
+                pred_rel = relations_to_tuples(pred_map[doc_id]["relations"])
+                gold_rel = relations_to_tuples(gold_map[doc_id]["relations"])
 
-        metrics = compute_metrics(all_pred, all_gold)
+                all_pred.extend(pred_rel)
+                all_gold.extend(gold_rel)
 
-        print("\nEvaluation:")
-        print(metrics)
+            metrics = compute_metrics(all_pred, all_gold)
+
+            print("\nEvaluation:")
+            print(metrics)
 
 
 def main() -> None:
@@ -62,7 +70,7 @@ def main() -> None:
     parser.add_argument("--output", default="outputs/predictions.json")
     parser.add_argument("--backend", default="mock", choices=["mock", "vllm"])
     parser.add_argument("--model", default=None)
-
+    parser.add_argument("--gold", default=None)
     args = parser.parse_args()
 
     run(
@@ -70,6 +78,7 @@ def main() -> None:
         output_path=args.output,
         backend=args.backend,
         model=args.model,
+        gold_path=args.gold,
     )
 
 

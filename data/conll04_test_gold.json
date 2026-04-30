@@ -1,0 +1,9523 @@
+[
+  {
+    "document_id": "conll04_test_0",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Hakawati Theatre",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Arab",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Jerusalem",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Palestinians",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_1",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "PERUGIA",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Italy",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "AP",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_2",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Reagan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "American",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "America",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "American",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_3",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Congress",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Washington",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Dec. 13 ,",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Reagan",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_4",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "University of Virginia",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Charlottesville",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Dec. 16 ,",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Congress",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "Central America",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_5",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Wright",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "University of Texas",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Nixon",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "1973",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "1974",
+        "type": "OTHER"
+      },
+      {
+        "id": "E6",
+        "text": "Watergate",
+        "type": "OTHER"
+      },
+      {
+        "id": "E7",
+        "text": "White House",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_6",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Nikita Khrushchev",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Soviet",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Cuban missile crisis",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_7",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Anastas Mikoyan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Soviet",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Khrushchev",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_8",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Mikoyan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Khrushchev",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Soviet",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_9",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Alekseev",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Soviet",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Moscow",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_10",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "MILAN",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Italy",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "AP",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_11",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Hot Springs National Park",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Ark.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_12",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Aguadilla",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Puerto Rico",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_13",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Fort Wainwright annex",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Fairbanks",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Alaska",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Located_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_14",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "ATLANTIC CITY",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "N.J .",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_15",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "FRESNO",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Calif .",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_16",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Moscow",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Bolshoi Ballet",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Moscow",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Leningrad",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Kirov Ballet",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E6",
+        "text": "Armenian",
+        "type": "OTHER"
+      },
+      {
+        "id": "E7",
+        "text": "Yerevan",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E8",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E9",
+        "text": "June Anderson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E10",
+        "text": "Carol Vaness",
+        "type": "PERSON"
+      },
+      {
+        "id": "E11",
+        "text": "British",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E4",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E9",
+        "tail": "E8",
+        "type": "Live_In"
+      },
+      {
+        "head": "E10",
+        "tail": "E8",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_17",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Boston University",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Michael D. Papagiannis",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "100 million years",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Earth",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_18",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Ostined",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Lesny",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Liberec",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Czechoslovakia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Gmund",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Austria",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E4",
+        "type": "Located_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E4",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E6",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_19",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "BONE",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Idaho",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "AP",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_20",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bingham County",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Bill Gordon",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_21",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Canada",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Yves Fortier",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_22",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Donald Miller",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "United Federation of Teachers",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Bert Shanas",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_23",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Navy",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Michael Coats",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_24",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "California",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "69 mph",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Ontario",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "57 mph",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "El Toro",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E1",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_25",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "2 a.m.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "9 degrees",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Yellowstone",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Wyo.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "85 degrees",
+        "type": "OTHER"
+      },
+      {
+        "id": "E6",
+        "text": "McAllen",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E7",
+        "text": "Texas",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E7",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_26",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Steve Wright",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "DOE",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_27",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bert Byers",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Cecil Field Naval Air Station",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_28",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Urutigoechea",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Bayonee",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Bonloc",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "France",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Poitiers",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "France",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E4",
+        "type": "Located_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E6",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E6",
+        "type": "Located_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E4",
+        "type": "Located_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E6",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_29",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Judith C. Toth",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Maryland",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "House of Delegates",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_30",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Center for Disease Control",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Fort Collins",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Jan. 3",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_31",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Hatcher",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Onondaga territory",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Shoshone-Bannock reservation",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Idaho",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_32",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Albert O. Harjula",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Thomaston",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Paul Fournier",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Department of Inland Fisheries and Wildlife",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_33",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "$3.2 billion",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Savannah River",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "$3.6 billion",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Idaho Falls",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Idaho",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_34",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Watergate",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Bush",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_35",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Reagan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Ralph K. Winter",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "2nd U.S. Circuit Court of Appeals",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "New York",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Kenneth Starr",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "U.S. Circuit Court of Appeals",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E7",
+        "text": "District of Columbia",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Work_For"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E6",
+        "type": "Work_For"
+      },
+      {
+        "head": "E6",
+        "tail": "E7",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_36",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Reagan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Normandy",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Omaha Beach",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Normandy",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_37",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "$1 , 600 ,",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Darryl Breniser",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Blue Ball",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_38",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Terry Hands",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Stratford-upon-Avon",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "London",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Barbican",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_39",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "NASHVILLE",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Tenn .",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_40",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "TUNIS",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Tunisia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "AP",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_41",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Gadhafi",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Navy",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "U.S.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_42",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Arab League",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Chedli Klibi",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_43",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Abrams",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Latin America bureau",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Bush",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_44",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "King",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "April 4 , 1968",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Memphis",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Tenn.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_45",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Soviet",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Eduard A. Shevardnadze",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "China",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_46",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Beijing",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Li",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "China",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_47",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "2 million",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Cambodia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "8 million",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Khmer Rouge",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_48",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Walesa",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Solidarity",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "1980",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Poles",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_49",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bradley First Air",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Ottawa",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Canada",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Montreal",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Emery Air Freight Corp.",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E6",
+        "text": "Dayton",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_50",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Eastport International",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Upper Marlboro , Md.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "14 , 800 feet",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "$5 million",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_51",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "1985",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Sultan Al-Saud",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Saudi Arabia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Rodolfo Neri Vela",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Mexican",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_52",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Rocky Mountains",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Montana",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "50 mph",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Livingston",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_53",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Folke Nyberg",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "University of Washington",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Seattle",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Pacific Rim",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_54",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Seattle",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Puget Sound",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Lake Washington",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_55",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Chicago",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "William J. Bennett",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_56",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Samuel L. Husk",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Council of Great City Schools",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_57",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Navy",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Nettie Johnson",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_58",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "G. Ernest Tidwell",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "10 percent",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_59",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Pemex",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Francisco Rojas",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_60",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Notimex",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Ricardo Camero Cardiel",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Ciudad Madero",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_61",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Aussedat-Rey SA",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Europe",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_62",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "International Paper",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Ann Silvernail",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_63",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "GIESSEN",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "West Germany",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "AP",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_64",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Minox",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Leica company",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Wetzlar",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Rollei",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "Braunschweig",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_65",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Leica",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Hans Guenther von Zydowitz",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "AP",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "$60.6 million",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_66",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Scott Hinton",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Elders Futures Inc.",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_67",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "James K. Batten",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Knight-Ridder",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_68",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Middletown",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Eaglebrook East",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Eaglebrook Plastics Inc.",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Chicago",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_69",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "BEIRUT",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Lebanon",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "AP",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_70",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Organization of the Oppressed on Earth",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "William R. Higgins",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_71",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "America",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Higgins",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Abdul Karim Obeid",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Higgins",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Higgins",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "3 p.m.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E7",
+        "text": "July 31 , 1989",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E1",
+        "type": "Live_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_72",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "John Jamison",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "National Weather Service",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Galveston.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_73",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Pat Epps",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Greenland Expedition Society",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Greenland",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "1942.",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_74",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Vaughan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Air Force",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "1942",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_75",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Mrs. Say",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Cadiz",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Kentucky.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E4",
+        "type": "Live_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_76",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "NEW ORLEANS",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "AP",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_77",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Pacific Marine Inc.",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Houston",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "15 miles",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Grand Isle.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_78",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sandi Sacher",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Boise",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Idaho.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_79",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "6 million acres",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "West",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Alaska",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "1988",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Sacher",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E5",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E5",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_80",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Santa Monica",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Tom Van Sant",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_81",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "New Hampshire",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Virginia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Gerald Baliles",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_82",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bush",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Sununu",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Virginia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Baliles",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_83",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bush",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "European Community",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "15 percent",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "$100 million",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Europe.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E5",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E6",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_84",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "State Department",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Kenya",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Mombasa",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_85",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "China",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Shaw Yu-ming",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Government Information",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Taiwan",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Washington",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_86",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Taiwan",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "China",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Washington",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "National Press Building",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "U.S.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_87",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Wyeth-Ayerst Laboratories",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Philadelphia.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_88",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "2 a.m. EDT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Cape Hatteras",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "N.C.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Jacksonville",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "N.C.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Dodge City",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E7",
+        "text": "Kan.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Located_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E7",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_89",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "3 a.m. EDT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Klamath Falls",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Ore.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Yuma",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Ariz.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_90",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Fort Lewis",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Wash.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Oregon",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_91",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Dave Olson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Payette National Forest",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Idaho",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_92",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Oregon",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "60 , 000 acres",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "La Grande",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_93",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Baker",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Unity",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Enterprise",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "John Day",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Forest Service",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E6",
+        "text": "Mike Ferris.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E6",
+        "tail": "E5",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_94",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "GOP",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "David Fleischer",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "North Miami",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "John Stembridge.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_95",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "NRC",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "DOE",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Robert Bernero",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_96",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Khmer Rouge",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Khieu Samphan",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_97",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Grand Isle",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "La.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_98",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Port Arthur",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Malcolm Grant",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Sabine Pass",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Louisiana",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Port Arthur.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E5",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_99",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Lutie Dyson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Lake Charles",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "La.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_100",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Rhode Island",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Warwick",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Pawtuxet River.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_101",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jack Frazier",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Rotary Club",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_102",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Tom Defelice",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Warwick",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Disney World",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Florida",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_103",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Sherman Finesilver",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "John C. Keene",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_104",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Iowa",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Terry Branstad",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "National Governors ' Association",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Booth Gardner",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Washington",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Branstad",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Work_For"
+      },
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "Work_For"
+      },
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Live_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E1",
+        "type": "Live_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E3",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_105",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Idaho",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Cecil Andrus",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_106",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Vietnam",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Hun Sen",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "U.N.",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Javier Perez de Cuellar.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_107",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "40 million",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "New England",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "10 percent",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "XBT Telecom",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "John Johnson",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E5",
+        "tail": "E4",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_108",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bernice McIntyre",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Public Utilities Commission.",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_109",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "U.S. District Court",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Anchorage",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Alaska",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Pacific Ocean",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Seoul",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "South Korea.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E6",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_110",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Mason",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "HHS",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Louis Sullivan",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_111",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Senate Judiciary Committee",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Joseph R. Biden",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_112",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Pentagon",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_113",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Revolutionary Justice Organization",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Cicippio",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Beirut",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "An-Nahar.",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_114",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Anderson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Middle East",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "The Associated Press",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Beirut",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "March 16 , 1985.",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Work_For"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_115",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jacobsen",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Colorado",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "London",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Anderson",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_116",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Wyatt McCauley",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "CH2M Hill",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Denver.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_117",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "2 p.m. EDT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "7 -",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Houston",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Ellington Air Force Base",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Galveston",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Texas.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E6",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E6",
+        "type": "Located_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E6",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_118",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "William P. Albrecht",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Commodity Futures Trading Commission.",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_119",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Manygate Management",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Ogdon",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Charing Cross Hospital",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_120",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Debra Sweiger",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Issaquah",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "King County",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Vaughn Van Zant.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_121",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Mike Norton",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Ken Fimberg",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Denver",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Peter Murtha",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "Justice Department",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E7",
+        "text": "Washington.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Live_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E1",
+        "type": "Live_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E6",
+        "type": "Work_For"
+      },
+      {
+        "head": "E5",
+        "tail": "E7",
+        "type": "Live_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E7",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_122",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Kim Dae-jung",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "South Korea",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "North Korea.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_123",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Washington",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Cascade",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "84 percent",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Greg Thayer",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "U.S. Forest Service.",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_124",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "California",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Sierra Nevada",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "11 , 700 acres",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_125",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Michael Harrington",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "City University",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Joseph S. Murphy",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_126",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "West",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Idaho",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Oregon",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "California",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Washington",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Boise Interagency Fire Center",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E1",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_127",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Idaho",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Cecil Andrus",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_128",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "AP",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Jeff Widener",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Bangkok",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_129",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bangkok",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Klong Toey",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_130",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Arensberg",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Ofer Bar-Yosef",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Harvard University",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Bernard Vandermeersch",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "University of Bordeaux",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E6",
+        "text": "France",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E7",
+        "text": "Kebara",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Work_For"
+      },
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Work_For"
+      },
+      {
+        "head": "E4",
+        "tail": "E6",
+        "type": "Live_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E6",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_131",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Carlos Tenev",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Peronist Party",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Peron.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_132",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Guernsey",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Britain",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Channel Islands",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "France.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_133",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Wharf Holdings",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Hong Kong",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "28 percent",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_134",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jack MacAllister",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "U S West inc.",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Hong Kong",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_135",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Lawrence Kane Jr.",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Cincinnati",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Ohio",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Home State",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_136",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jean-Luckenson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Signal FM.",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_137",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Mexican Southeast.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "EZLN",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Mexico",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "March 1994",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Located_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_138",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Moscow",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "ITAR-TASS",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "1924 GMT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "21 Mar 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_139",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Moscow",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "ITAR-TASS",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_140",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Tehran",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "100 kilometres",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Stepanakert",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Nagorno-Karabakh",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Azerbaijan.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_141",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "National Alliance",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Gianfranco Fini",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_142",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Namialo",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Nampula Province",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Northern Improvement Brigade",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Brigada de Melhoramentos do Norte",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "BMN",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E6",
+        "text": "Nampula",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E6",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E6",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E6",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E1",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_143",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Tokyo",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "NIHON KEIZAI SHIMBUN",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "6 Feb 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_144",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Serb Radical Party",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Branko Vojnic",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Beli Manastir",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Marko Atlagic",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Milan Ernjakovic",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "Krajina",
+        "type": "PERSON"
+      },
+      {
+        "id": "E7",
+        "text": "Serb Democratic Party",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E8",
+        "text": "SDS",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E7",
+        "type": "Work_For"
+      },
+      {
+        "head": "E4",
+        "tail": "E8",
+        "type": "Work_For"
+      },
+      {
+        "head": "E5",
+        "tail": "E7",
+        "type": "Work_For"
+      },
+      {
+        "head": "E5",
+        "tail": "E8",
+        "type": "Work_For"
+      },
+      {
+        "head": "E6",
+        "tail": "E7",
+        "type": "Work_For"
+      },
+      {
+        "head": "E6",
+        "tail": "E8",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_145",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bosnia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Sofia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "BTA",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "1646 GMT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "15 Feb 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_146",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Havana",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Radio Rebelde Network",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_147",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Paris",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "AFP",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "2200 GMT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "3 Feb 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_148",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Iqlim al-Tuffah",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Beirut",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Radio Lebanon",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "0900 GMT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "15 Feb 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_149",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Dutch Air Force",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Bosnia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "The Hague",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "ANP",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "1540 GMT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E6",
+        "text": "9 Feb 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_150",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jerusalem",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "THE JERUSALEM POST",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "15 Oct 93",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_151",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jerusalem",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "THE JERUSALEM POST",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_152",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Gerald Steinberg",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Bar-Ilan University",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_153",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Steven Bryen",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Pentagon",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "U.S.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_154",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Pedatzur",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Massachusetts Institute of Technology",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_155",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Australian Embassies",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Jakarta",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Bangkok",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Japan",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "South Korea",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_156",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Australian Government",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "North Korean Government",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Australia",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_157",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "North Korea",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "North Korea",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Yongbyon.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_158",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Nova Scotia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "John Savage",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Cuba",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Ricardo Cabrisas",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_159",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Miguel Rodriguez Mendoza",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "ICE",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "15 December",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "U.S. Environmental Protection Agency",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "Venezuela",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_160",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "S. Gusak",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Belarusian",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_161",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Duesseldorf",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "HANDELSBLATT",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "11 Nov 93",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_162",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jordi Aguil&oacute",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "CNM",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_163",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Santiago",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "26 Dec",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "EFE",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "25 December",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "Valparaiso",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "125 km",
+        "type": "OTHER"
+      },
+      {
+        "id": "E7",
+        "text": "Santiago.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_164",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Rio de Janeiro",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "O GLOBO",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_165",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sao Paulo",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Sao Paulo",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Institute for Nuclear and Energy Research",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Ipen",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "Sao Paulo",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Ipen",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E7",
+        "text": "National Nuclear Energy Commission",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E8",
+        "text": "CNEN",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E5",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E6",
+        "tail": "E5",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_166",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Association of Ipen Employees",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Assipen",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Federal Employees Union",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Sao Paulo",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Sindisef",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E6",
+        "text": "Ipen",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E7",
+        "text": "Iodine- 131",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E4",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E4",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_167",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Guatemala City",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Teleonce Television",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_168",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Yuriy Kuzmenko",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Stanislav Mikhaylovich Korochkin",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Magadan Basin Okhotrybvod ( Okhotsk Sea Fishing Administration ) Department",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Stanislav Mikhaylovich",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Washington",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Okhotsk Sea",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E7",
+        "text": "Washington",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E8",
+        "text": "Bering Sea",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_169",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Helsinki",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Suomen Yleisradio Network",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_170",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Lima",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "EL COMERCIO",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "19 Mar 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_171",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "San Ignacio forest",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Jaen",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "San Ignacio de Cajamarca",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_172",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Huancabamba",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Piura",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Bagua",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Condorcanqui",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Amazonas",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "San Martin",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E7",
+        "text": "Nueva Cajamarca",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E8",
+        "text": "Rioja",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E9",
+        "text": "Soritor",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E10",
+        "text": "Mayo",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E11",
+        "text": "Sisa",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E12",
+        "text": "Biabo",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E5",
+        "type": "Located_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_173",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Kiev",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "PRAVDA UKRAINY",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "5 Apr 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_174",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Ivan Plyushch",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Ukrainian",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_175",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Beijing",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "JINGJI YANJIU",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_176",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Beijing",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "23 Jun",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "XINHUA",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "National People 's Congress",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "NPC",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E6",
+        "text": "China",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E7",
+        "text": "State Science and Technology Commission",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E8",
+        "text": "Deng Nan",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E6",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E7",
+        "tail": "E6",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E8",
+        "tail": "E6",
+        "type": "Live_In"
+      },
+      {
+        "head": "E8",
+        "tail": "E7",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_177",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Deng Nan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "China",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_178",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Congress",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_179",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "LDP",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Kim Pom-myon",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Nonsan County",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      },
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_180",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Kakizawa",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Hata",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Kim Il-song",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "North Korea",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_181",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bangkok",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "BANGKOK POST",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_182",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Mexico City",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "LA JORNADA",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_183",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "PRI",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Ernesto Zedillo Ponce de Leon",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "37 percent",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Valley of Mexico",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_184",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Algiers",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "ENTV Television Network",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "1200 GMT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "28 May 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_185",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Algiers",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "ENTV Television Network",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_186",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Moscow",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "NEZAVISIMAYA GAZETA",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "23 Jun 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_187",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Madras",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "THE HINDU",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_188",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Panama City",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "ACAN",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_189",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Johannesburg",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "SAPA",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_190",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Parliament",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "May 9",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "SAPA",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Mr Nelson Rohihlahla Mandela",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Republic of South Africa",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "12.14AM",
+        "type": "OTHER"
+      },
+      {
+        "id": "E7",
+        "text": "( 9 May",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_191",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Nairobi",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "KNA",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "0945 GMT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "26 May 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_192",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Datuk Sri Dr. Mahathir",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "African National Congress",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "ANC",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Nelson Mandela",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "de Klerk",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "South Africa",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E6",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E3",
+        "tail": "E6",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E4",
+        "tail": "E2",
+        "type": "Work_For"
+      },
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "Work_For"
+      },
+      {
+        "head": "E4",
+        "tail": "E6",
+        "type": "Live_In"
+      },
+      {
+        "head": "E5",
+        "tail": "E6",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_193",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "NUB",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Kim Hyong-ki",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "North Korea",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "IAEA",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_194",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bratislava",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "May 11",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "CTK",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Slovak",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "Foreign Ministry",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E6",
+        "text": "Budapest",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E7",
+        "text": "Danube",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E8",
+        "text": "Gabcikovo derivation canal",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E9",
+        "text": "Slovakia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E10",
+        "text": "Danube",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E11",
+        "text": "Hungarian Embassy",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E12",
+        "text": "CTK",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E8",
+        "tail": "E9",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_195",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "EU",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Ortega",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Rene Steichen",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "EU",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "Brussels",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_196",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "PLO",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Yasir 'Arafat",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Sa 'id Mu 'addi",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Cairo",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "18 May",
+        "type": "OTHER"
+      },
+      {
+        "id": "E6",
+        "text": "Nabil",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_197",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Pacific Fleet",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Georgiy Gurinov",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_198",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Moscow",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "May 20",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "TASS",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Middle East and Africa department",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "Russian Foreign Ministry",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E6",
+        "text": "Viktor Posuvalyuk",
+        "type": "PERSON"
+      },
+      {
+        "id": "E7",
+        "text": "ITAR-TASS",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E8",
+        "text": "Russians",
+        "type": "OTHER"
+      },
+      {
+        "id": "E9",
+        "text": "Algeria",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E6",
+        "tail": "E4",
+        "type": "Work_For"
+      },
+      {
+        "head": "E6",
+        "tail": "E5",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_199",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Russia",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Center for Problems of National Security and International Relations",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Sergey Rogov",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_200",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Chisinau",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "BASAPRESS",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "1750 GMT",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "23 May 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_201",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "23 5 1994",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Mircea Snegur",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Agrarian Democratic Party of Moldova",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Valentin Krylov",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Socialist Party",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Work_For"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_202",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Federal Administrative Court",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Berlin",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Kurds",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Federal Republic",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Turkey",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      },
+      {
+        "head": "E1",
+        "tail": "E4",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_203",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Institute of Organic Chemistry",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Shanghai",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_204",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Kiev",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "HOLOS UKRAYINY",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "20 Apr 94",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_205",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Kiev",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "HOLOS UKRAYINY",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "OrgBased_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_206",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Ukraine",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Soviet Union",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Located_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_207",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Warren Commission",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Nov.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Dallas County Administration Building",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_208",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "LAPD",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Robert F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Sirhan Sirhan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Eu",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_209",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Highlight",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "June",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Sen. Robert F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Good Samaritan Hospital",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E5",
+        "text": "Los Angeles",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Ambassador Hotel",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E7",
+        "text": "Sirhan Bishara Sirhan",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E7",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_210",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "London",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "James Earl Ray",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Dr. Martin Luther King Jr",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_211",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Warren Commission",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Dallas County Administration Building",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_212",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "House Assassinations Committee",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Warren Commission",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Dallas",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E6",
+        "text": "Nov.",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_213",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Warren Commission",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "President John F. Kennedy",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_214",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Dallas",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Texas School Book Depository",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Dealey Plaza",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_215",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "President John F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Oswald",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_216",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Charles J. Guiteau",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "President James Garfield",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_217",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Nov.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Dallas",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Jack Ruby",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "President John F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "Dallas",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_218",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "John Martini",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Therese Afdahl",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Fort Lee",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Wednesday",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "Irving Flax",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E5",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_219",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Monday",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Texas School Book Depository",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Lee Harvard Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "President John F. Kennedy",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_220",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Dallas",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Danny Veno",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "President Kennedy",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_221",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sirhan Sirhan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "New York Sen. Robert F. Kennedy",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_222",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sirhan Sirhan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Sen. Robert F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Tuesday",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_223",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sen. Robert F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Sirhan B. Sirhan",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_224",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Sirhan Bishara Sirhan",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_225",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Washington , D.C.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "John Wilkes Booth",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "President Abraham Lincoln",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_226",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jean Paul Marat",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Charlotte Corday",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_227",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "James Earl Ray",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Dr. Martin Luther King Jr.",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Capitol Hill",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E4",
+        "text": "Raoul.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_228",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Warren Commission",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "President John F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "November",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_229",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Ray",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "April",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "King",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Memphis , Tenn",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_230",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "April",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Ford Theatre",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Washington",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Lincoln",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "John Wilkes Booth",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "Sic Semper Tyranus",
+        "type": "OTHER"
+      },
+      {
+        "id": "E7",
+        "text": "Tyrants",
+        "type": "OTHER"
+      },
+      {
+        "id": "E8",
+        "text": "Virginia",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E5",
+        "tail": "E4",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_231",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "James Earl Ray",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Martin Luther King Jr.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_232",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "James Earl Ray",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Memphis , Tenn.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Martin Luther King Jr.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_233",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Dallas",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Jack Ruby",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "President Kennedy.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_234",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sirhan B. Sirhan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Sen. Robert F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Tuesday",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_235",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Belli",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Jack Ruby",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "John F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Jim",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "Tammy Bakker",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E4",
+        "type": "Kill"
+      },
+      {
+        "head": "E4",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_236",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Nov.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Dallas",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_237",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "President Park Chung-hee",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Korean Central Intelligence Agency",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Kim Jae-kyu",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_238",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Chapman",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Lennon",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_239",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Mark David Chapman",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "John Lennon",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_240",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Lennon",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "New York",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Dakota",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Dec.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "Mark David Chapman",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E5",
+        "tail": "E1",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_241",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Lennon",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Ono",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Mark David Chapman",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E1",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_242",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Kleber Elias Gia Bustamante",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Red Sun",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Garcia Moreno",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Jose Antonio Briz Lopez.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E4",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_243",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "James Earl Ray",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Martin Luther King",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Memphis",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_244",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Rigoberto Lopez Perez",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Somoza Garcia",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_245",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sirhan B. Sirhan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Sen. Robert F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Middle",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_246",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sirhan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Israel",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Israel",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Markman",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_247",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Diamond",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Sen. Robert F. Kennedy",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Sirhan Sirhan",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_248",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Lyndon B. Johnson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Jack Ruby",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Oswald",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_249",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Lee Harvey Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "President Kennedy",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_250",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "McCord",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "President Nixon",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Mr. Fensterwald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "James Earl Ray",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Rev. Martin Luther King Jr.",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E4",
+        "tail": "E5",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_251",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Ruby",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Oswald",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Colt Cobra",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Dallas City",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Nov.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E6",
+        "text": "President Kennedy",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_252",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Abraham Lincoln",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "John Wilkes Booth",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Victor Garber",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Kill"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_253",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Dole",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Elizabeth",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "North Carolina",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_254",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Dole",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "North Carolina",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Elizabeth Dole",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Salisbury , N.C.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Dole",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "Bush",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_255",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "COLUMBIA , S.C.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Jesse Jackson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Sunday",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "South Carolina",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E4",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_256",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jesse Jackson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "South Carolina",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Tuesday",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Illinois",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_257",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Lowell Thomas",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Woodington , Ohio",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_258",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "CBS",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Eric Sevareid",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Velva",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Minot",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_259",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Hubert H. Humphrey",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Wallace , S.D.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Charles Lindbergh",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Anne Spencer Morrow",
+        "type": "PERSON"
+      },
+      {
+        "id": "E6",
+        "text": "Englewood , N.J.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E7",
+        "text": "Supreme Court",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E8",
+        "text": "National Industrial Recovery Act",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_260",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Mormon",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Brigham Young",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Whitingham , Vt",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_261",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Martin",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Jimbob",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Rogers",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Oklahoma",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E5",
+        "text": "Will Rogers",
+        "type": "PERSON"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E5",
+        "tail": "E4",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_262",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jesse Owens",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Danville , Ala.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_263",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Springsteen",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "New Jersey",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Bruce",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Universal Declaration",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "Human Rights",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_264",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "James Garfield",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Orange , Ohio",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_265",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Atwater",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "South Carolina",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "President Reagan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Sen. Strom Thurmond",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "South Carolina",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_266",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "St. Louis Street",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "New Orleans",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Fats Domino",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Barbara Hutson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Friday",
+        "type": "OTHER"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_267",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Buddy Holly",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Texas Tech University",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E3",
+        "text": "Holly",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Lubbock",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_268",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sunday",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "John Deere",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Rutland , Vt.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_269",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Rev. Jesse Jackson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "South Carolina",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_270",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Ulysses S. Grant",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Point Pleasant , Ohio",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_271",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "James Monroe",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Westmoreland County ,Virginia",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_272",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Sen. Bob Dole",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Russell , Kan.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_273",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Rev. Jesse Jackson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "South Carolina",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "FEMA",
+        "type": "ORGANIZATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_274",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Dwight D. Eisenhower",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Denison , Texas",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_275",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Martin Van Buren",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Kinderhook , N.Y.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Wolfgang Amadeus Mozart",
+        "type": "PERSON"
+      },
+      {
+        "id": "E5",
+        "text": "Vienna , Austria",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_276",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Jan.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Elvis Presley",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Tupelo , Miss",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_277",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Shutes",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Bob Dylan",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Duluth",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E4",
+        "text": "Hibbing",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_278",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Andrew Jackson",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "Waxhaw , S.C.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_279",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Benjamin Harrison",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E3",
+        "text": "North Bend , Ohio",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_280",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "U.S.",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Oliver Hazard Perry",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "South Kingstown , R.I.",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_281",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Rutherford B. Hayes",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Delaware , Ohio",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_282",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "United States",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "James Garfield",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Orange , Ohio",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_283",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Photo",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "COLOR",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Dwight D. Eisenhower",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "Oct.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E5",
+        "text": "Denison , Tex",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E5",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_284",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Bette Davis",
+        "type": "PERSON"
+      },
+      {
+        "id": "E2",
+        "text": "Ruth Elizabeth Davis",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "April",
+        "type": "OTHER"
+      },
+      {
+        "id": "E4",
+        "text": "Lowell , Mass",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E4",
+        "type": "Live_In"
+      },
+      {
+        "head": "E2",
+        "tail": "E4",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_285",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Oct.",
+        "type": "OTHER"
+      },
+      {
+        "id": "E2",
+        "text": "Jesse Alexander Helms Jr.",
+        "type": "PERSON"
+      },
+      {
+        "id": "E3",
+        "text": "Monroe",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E3",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_286",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "House",
+        "type": "ORGANIZATION"
+      },
+      {
+        "id": "E2",
+        "text": "Thursday",
+        "type": "OTHER"
+      },
+      {
+        "id": "E3",
+        "text": "Lawrence Welk",
+        "type": "PERSON"
+      },
+      {
+        "id": "E4",
+        "text": "North Dakota",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E3",
+        "tail": "E4",
+        "type": "Live_In"
+      }
+    ]
+  },
+  {
+    "document_id": "conll04_test_287",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "Indiana",
+        "type": "LOCATION"
+      },
+      {
+        "id": "E2",
+        "text": "Indianapolis",
+        "type": "LOCATION"
+      }
+    ],
+    "relations": [
+      {
+        "head": "E2",
+        "tail": "E1",
+        "type": "Located_In"
+      }
+    ]
+  }
+]
