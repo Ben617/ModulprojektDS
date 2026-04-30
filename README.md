@@ -1,5 +1,3 @@
-````bash
-cat > README.md << 'EOF'
 # Relation Extraction mit vLLM
 
 Dieses Projekt implementiert eine zweistufige Relation-Extraction-Pipeline:
