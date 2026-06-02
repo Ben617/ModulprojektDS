@@ -5,8 +5,8 @@ from src.json_utils import parse_json_array
 
 from src.prompts import build_ner_prompt
 
-def extract_entities(document: Document, llm) -> list[Entity]:
-    prompt = build_ner_prompt(document.text)
+def extract_entities(document: Document, llm, prompt_path:str) -> list[Entity]:
+    prompt = build_ner_prompt(document.text,prompt_path)
 
     raw_output = llm.generate(prompt)
     data = parse_json_array(raw_output)

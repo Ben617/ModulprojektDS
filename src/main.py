@@ -10,7 +10,7 @@ from src.evaluation import compute_metrics, relations_to_tuples
 import json
 from pathlib import Path
 
-def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None, limit: int | None) -> None:
+def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None, limit: int | None, ner_prompt: str, relation_prompt: str) -> None:
     documents = load_documents(input_path)
 
     if limit is not None:
@@ -20,8 +20,8 @@ def run(input_path: str, output_path: str, backend: str, model: str | None, gold
     predictions = []
 
     for document in tqdm(documents, desc="Processing documents"):
-        entities = extract_entities(document, llm)
-        relations = extract_relations(document, entities, llm)
+        entities = extract_entities(document, llm,ner_prompt)
+        relations = extract_relations(document, entities, llm,relation_prompt)
 
         prediction = Prediction(
             document_id=document.id,
@@ -75,6 +75,8 @@ def main() -> None:
     parser.add_argument("--model", default=None)
     parser.add_argument("--gold", default=None)
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--ner-prompt", default="prompts/ner_prompt.txt")
+    parser.add_argument("--relation-prompt", default="prompts/relation_prompt.txt")
     args = parser.parse_args()
 
     run(
@@ -84,6 +86,8 @@ def main() -> None:
         model=args.model,
         gold_path=args.gold,
         limit=args.limit,
+        ner_prompt=args.ner_prompt,
+        relation_prompt=args.relation_prompt,
     )
 
 
