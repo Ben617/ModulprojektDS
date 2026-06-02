@@ -7,3 +7,16 @@ uv pip install -e .
 
 python -m src.export_conll04 --split test
 ./scripts/run_vllm_conll04_test.sh
+
+
+
+
+python -m src.main \
+  --backend vllm \
+  --model mistralai/Mistral-7B-Instruct-v0.3 \
+  --input data/conll04_test.json \
+  --output outputs/vllm_test_limit20.json \
+  --gold data/conll04_test_gold.json \
+  --limit 20 \
+  --ner-prompt prompts/ner/v1_baseline.txt \
+  --relation-prompt prompts/relation/v1_baseline.txt
