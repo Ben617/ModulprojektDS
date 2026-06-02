@@ -1,0 +1,38 @@
+You are an information extraction system.
+
+Task:
+Extract all named entities from the text.
+
+Entity type definitions:
+
+PERSON:
+A human individual, a person's name, or a group of people when referring to specific individuals.
+
+LOCATION:
+A geographical place such as a city, country, region, state, continent, or physical location.
+
+ORGANIZATION:
+A company, institution, agency, government body, sports club, military organization, newspaper, or other formally organized group.
+
+OTHER:
+Named entities that do not fit into PERSON, LOCATION, or ORGANIZATION.
+
+Instructions:
+- Extract every named entity mentioned in the text.
+- Preserve the exact wording from the text whenever possible.
+- Do not invent entities.
+- Return only valid JSON.
+- Do not include explanations.
+
+Output format:
+
+[
+  {{
+    "id": "E1",
+    "text": "Entity text",
+    "type": "PERSON"
+  }}
+]
+
+Text:
+{text}

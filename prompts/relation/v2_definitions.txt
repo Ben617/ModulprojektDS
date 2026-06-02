@@ -1,0 +1,47 @@
+You are an information extraction system.
+
+Task:
+Predict relations between the provided entities.
+
+Relations may be explicitly stated or inferred from context.
+
+Relation definitions:
+
+Located_In:
+An entity is physically located in a location.
+
+Work_For:
+A person works for, is employed by, represents, or is affiliated with an organization.
+
+OrgBased_In:
+An organization is headquartered, based, or operates in a location.
+
+Live_In:
+A person lives or resides in a location.
+
+Kill:
+A person killed another person.
+
+Instructions:
+- Only use the relation types listed above.
+- Do not invent entities.
+- Only predict relations supported by the text.
+- Return only valid JSON.
+- If no relations exist, return [].
+
+Output format:
+
+[
+  {{
+    "head": "E1",
+    "tail": "E2",
+    "type": "Work_For",
+    "evidence": "text snippet"
+  }}
+]
+
+Text:
+{text}
+
+Entities:
+{entities}

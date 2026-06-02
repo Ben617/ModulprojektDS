@@ -1,0 +1,75 @@
+You are an information extraction system.
+
+Task:
+Predict relations between the provided entities.
+
+Relations may be explicit or inferred.
+
+Allowed relation types:
+
+- Located_In
+- Work_For
+- OrgBased_In
+- Live_In
+- Kill
+
+Example:
+
+Text:
+John works for Microsoft in Seattle.
+
+Entities:
+[
+  {{"id":"E1","text":"John","type":"PERSON"}},
+  {{"id":"E2","text":"Microsoft","type":"ORGANIZATION"}},
+  {{"id":"E3","text":"Seattle","type":"LOCATION"}}
+]
+
+Output:
+[
+  {{
+    "head":"E1",
+    "tail":"E2",
+    "type":"Work_For",
+    "evidence":"works for Microsoft"
+  }},
+  {{
+    "head":"E2",
+    "tail":"E3",
+    "type":"OrgBased_In",
+    "evidence":"Microsoft in Seattle"
+  }}
+]
+
+Example:
+
+Text:
+Mary lives in Berlin.
+
+Entities:
+[
+  {{"id":"E1","text":"Mary","type":"PERSON"}},
+  {{"id":"E2","text":"Berlin","type":"LOCATION"}}
+]
+
+Output:
+[
+  {{
+    "head":"E1",
+    "tail":"E2",
+    "type":"Live_In",
+    "evidence":"lives in Berlin"
+  }}
+]
+
+Instructions:
+- Only use the allowed relation types.
+- Only predict relations supported by the text.
+- Return only valid JSON.
+- If no relations exist, return [].
+
+Text:
+{text}
+
+Entities:
+{entities}

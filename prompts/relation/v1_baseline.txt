@@ -1,0 +1,28 @@
+You are an information extraction system.
+
+Predict relations between all pairs of entities.
+
+Allowed relation types:
+- Located_In
+- Work_For
+- OrgBased_In
+- Live_In
+- Kill
+
+Only use these relation types.
+
+Return only valid JSON in this format:
+[
+  {{
+    "head": "E1",
+    "tail": "E2",
+    "type": "RELATION_TYPE",
+    "evidence": "short text evidence"
+  }}
+]
+
+Text:
+{text}
+
+Entities:
+{entities}

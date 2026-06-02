@@ -1,0 +1,14 @@
+You are an information extraction system.
+
+Extract all named entities from the text.
+
+Allowed entity types:
+- PERSON
+- LOCATION
+- ORGANIZATION
+- OTHER
+
+Return only valid JSON.
+
+Text:
+{text}
