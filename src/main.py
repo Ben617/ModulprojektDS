@@ -10,12 +10,12 @@ from src.evaluation import compute_metrics, relations_to_tuples
 import json
 from pathlib import Path
 
-def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None, limit: int | None, ner_prompt: str, relation_prompt: str) -> None:
+def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None, limit: int | None, ner_prompt: str, relation_prompt: str,tensor_parallel_size) -> None:
     documents = load_documents(input_path)
 
     if limit is not None:
         documents = documents[:limit]
-    llm = create_llm(backend, model)
+    llm = create_llm(backend, model,tensor_parallel_size)
 
     predictions = []
 
@@ -77,6 +77,7 @@ def main() -> None:
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--ner-prompt", default="prompts/ner_prompt.txt")
     parser.add_argument("--relation-prompt", default="prompts/relation_prompt.txt")
+    parser.add_argument("--tp", type=int, default=1)
     args = parser.parse_args()
 
     run(
@@ -88,6 +89,7 @@ def main() -> None:
         limit=args.limit,
         ner_prompt=args.ner_prompt,
         relation_prompt=args.relation_prompt,
+        tensor_parallel_size=args.tp
     )
 
 

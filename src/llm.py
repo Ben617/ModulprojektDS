@@ -25,10 +25,10 @@ class MockLLM:
 
 
 class VLLM:
-    def __init__(self, model_name: str):
+    def __init__(self, model_name: str,tensor_parallel_size: int =1):
         from vllm import LLM, SamplingParams
 
-        self.llm = LLM(model=model_name)
+        self.llm = LLM(model=model_name,tensor_parallel_size=tensor_parallel_size)
         self.sampling_params = SamplingParams(
             temperature=0.0,
             max_tokens=512,
@@ -39,13 +39,13 @@ class VLLM:
         return outputs[0].outputs[0].text
 
 
-def create_llm(backend: str, model_name: str | None = None):
+def create_llm(backend: str, model_name: str | None = None, tensor_parallel_size: int = 1,):
     if backend == "mock":
         return MockLLM()
 
     if backend == "vllm":
         if not model_name:
             raise ValueError("model_name is required when backend='vllm'")
-        return VLLM(model_name)
+        return VLLM(model_name,tensor_parallel_size=tensor_parallel_size,)
 
     raise ValueError(f"Unknown backend: {backend}")
