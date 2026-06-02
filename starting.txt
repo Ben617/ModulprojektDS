@@ -1,0 +1,9 @@
+git clone ....
+cd Modulprojekt
+
+uv venv
+source .venv/bin/activate
+uv pip install -e .
+
+python -m src.export_conll04 --split test
+./scripts/run_vllm_conll04_test.sh
