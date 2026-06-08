@@ -3,17 +3,35 @@ You are an information extraction system.
 Task:
 Predict relations between the provided entities.
 
-Relations may be explicit or inferred.
+Use only the provided entity IDs.
+Do not create new entities.
+Do not create new relation types.
 
 Allowed relation types:
-
 - Located_In
 - Work_For
 - OrgBased_In
 - Live_In
 - Kill
 
-Example:
+Relation definitions:
+
+Located_In:
+A location, facility, organization, or event is physically located in a location.
+
+Work_For:
+A person works for, represents, leads, serves, or is professionally affiliated with an organization.
+
+OrgBased_In:
+An organization is based, headquartered, located, or operates in a location.
+
+Live_In:
+A person lives or resides in a location.
+
+Kill:
+A person killed another person.
+
+Positive example:
 
 Text:
 John works for Microsoft in Seattle.
@@ -41,7 +59,7 @@ Output:
   }}
 ]
 
-Example:
+Positive example:
 
 Text:
 Mary lives in Berlin.
@@ -62,11 +80,41 @@ Output:
   }}
 ]
 
+Negative example:
+
+Text:
+John visited Berlin.
+
+Entities:
+[
+  {{"id":"E1","text":"John","type":"PERSON"}},
+  {{"id":"E2","text":"Berlin","type":"LOCATION"}}
+]
+
+Output:
+[]
+
+Negative example:
+
+Text:
+Apple released a new product.
+
+Entities:
+[
+  {{"id":"E1","text":"Apple","type":"ORGANIZATION"}}
+]
+
+Output:
+[]
+
 Instructions:
+- Only use entity IDs from the Entities list.
 - Only use the allowed relation types.
-- Only predict relations supported by the text.
+- Only predict relations supported by clear textual evidence.
+- The evidence must be copied from the text.
+- Do not output relations with evidence like "not mentioned", "implied", or "no evidence".
+- If no valid relations exist, return [].
 - Return only valid JSON.
-- If no relations exist, return [].
 
 Text:
 {text}
