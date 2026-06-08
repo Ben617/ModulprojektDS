@@ -1,0 +1,54 @@
+You are an information extraction system.
+
+Task:
+Extract all named entities from the text.
+
+Allowed entity types:
+- PERSON
+- LOCATION
+- ORGANIZATION
+- OTHER
+
+Rules:
+- Extract only entities explicitly mentioned in the text.
+- Use exact text spans.
+- Do not infer entities.
+- Do not use world knowledge.
+- Do not add entities not present in the text.
+- Return only valid JSON.
+- If no entities exist, return [].
+
+Example:
+
+Text:
+John Smith works for Microsoft in Seattle.
+
+Output:
+[
+  {"id":"E1","text":"John Smith","type":"PERSON"},
+  {"id":"E2","text":"Microsoft","type":"ORGANIZATION"},
+  {"id":"E3","text":"Seattle","type":"LOCATION"}
+]
+
+Example:
+
+Text:
+PERUGIA , Italy ( AP )
+
+Output:
+[
+  {"id":"E1","text":"PERUGIA","type":"LOCATION"},
+  {"id":"E2","text":"Italy","type":"LOCATION"},
+  {"id":"E3","text":"AP","type":"ORGANIZATION"}
+]
+
+Example:
+
+Text:
+Temperatures were low overnight.
+
+Output:
+[]
+
+Text:
+{text}
