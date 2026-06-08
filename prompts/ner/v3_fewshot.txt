@@ -25,9 +25,9 @@ John Smith works for Microsoft in Seattle.
 
 Output:
 [
-  {"id":"E1","text":"John Smith","type":"PERSON"},
-  {"id":"E2","text":"Microsoft","type":"ORGANIZATION"},
-  {"id":"E3","text":"Seattle","type":"LOCATION"}
+  {{"id":"E1","text":"John Smith","type":"PERSON"}},
+  {{"id":"E2","text":"Microsoft","type":"ORGANIZATION"}},
+  {{"id":"E3","text":"Seattle","type":"LOCATION"}}
 ]
 
 Example:
@@ -37,9 +37,9 @@ PERUGIA , Italy ( AP )
 
 Output:
 [
-  {"id":"E1","text":"PERUGIA","type":"LOCATION"},
-  {"id":"E2","text":"Italy","type":"LOCATION"},
-  {"id":"E3","text":"AP","type":"ORGANIZATION"}
+  {{"id":"E1","text":"PERUGIA","type":"LOCATION"}},
+  {{"id":"E2","text":"Italy","type":"LOCATION"}},
+  {{"id":"E3","text":"AP","type":"ORGANIZATION"}}
 ]
 
 Example:
