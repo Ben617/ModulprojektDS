@@ -55,8 +55,15 @@ def run(input_path: str, output_path: str, backend: str, model: str | None, gold
                 if doc_id not in pred_map:
                     continue
 
-                pred_rel = relations_to_tuples(pred_map[doc_id]["relations"])
-                gold_rel = relations_to_tuples(gold_map[doc_id]["relations"])
+                pred_rel = relations_to_tuples(
+                    pred_map[doc_id]["relations"],
+                    pred_map[doc_id].get("entities", []),
+                )
+
+                gold_rel = relations_to_tuples(
+                    gold_map[doc_id]["relations"],
+                    gold_map[doc_id].get("entities", []),
+                )
 
                 all_pred.extend(pred_rel)
                 all_gold.extend(gold_rel)
