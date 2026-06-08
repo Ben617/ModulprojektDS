@@ -6,7 +6,7 @@ Extract all named entities from the text.
 Entity type definitions:
 
 PERSON:
-A human individual, a person's name, or a group of people when referring to specific individuals.
+A human individual or a person's name.
 
 LOCATION:
 A geographical place such as a city, country, region, state, continent, or physical location.
@@ -17,21 +17,34 @@ A company, institution, agency, government body, sports club, military organizat
 OTHER:
 Named entities that do not fit into PERSON, LOCATION, or ORGANIZATION.
 
+Important rules:
+
+* Extract only entities that are explicitly mentioned in the text.
+* Do not infer entities.
+* Do not use external knowledge.
+* Do not create entities that are not present in the text.
+* Use the exact text span from the text whenever possible.
+* Do not expand abbreviations.
+* Do not normalize names.
+* Do not add titles, locations, organizations, or people that are not explicitly written.
+* If an entity is not explicitly present in the text, do not output it.
+
 Instructions:
-- Extract every named entity mentioned in the text.
-- Preserve the exact wording from the text whenever possible.
-- Do not invent entities.
-- Return only valid JSON.
-- Do not include explanations.
+
+* Extract every valid named entity mentioned in the text.
+* Preserve the exact wording from the text whenever possible.
+* Return only valid JSON.
+* Do not include explanations.
+* If no entities are present, return [].
 
 Output format:
 
 [
-  {{
-    "id": "E1",
-    "text": "Entity text",
-    "type": "PERSON"
-  }}
+{{
+"id": "E1",
+"text": "Entity text",
+"type": "PERSON"
+}}
 ]
 
 Text:
