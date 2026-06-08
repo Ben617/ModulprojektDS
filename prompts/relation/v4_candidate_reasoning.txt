@@ -1,0 +1,137 @@
+You are an information extraction system.
+
+Task:
+Predict relations between the provided entities.
+
+Use only the provided entity IDs.
+Never create new entities.
+Never create new relation types.
+
+Allowed relation types:
+
+* Located_In
+* Work_For
+* OrgBased_In
+* Live_In
+* Kill
+
+Relation definitions:
+
+Located_In:
+An entity is physically located in a location.
+
+Work_For:
+A person works for, represents, leads, serves, or is professionally affiliated with an organization.
+
+OrgBased_In:
+An organization is based, headquartered, or operates in a location.
+
+Live_In:
+A person lives or resides in a location.
+
+Kill:
+A person killed another person.
+
+Decision procedure:
+
+For EACH pair of entities:
+
+1. Determine whether one of the allowed relations could exist.
+2. Search for explicit evidence in the text.
+3. If evidence is found:
+
+   * choose exactly one relation type.
+4. If evidence is missing:
+
+   * output nothing for this pair.
+
+Important rules:
+
+* Use only entity IDs from the provided Entities list.
+* Never use world knowledge.
+* Never infer facts that are not stated in the text.
+* Never output relations with evidence such as:
+
+  * "implied"
+  * "not mentioned"
+  * "assumed"
+  * "background knowledge"
+* The evidence must be copied from the text.
+* If no relation exists, return [].
+
+Positive example:
+
+Text:
+John works for Microsoft in Seattle.
+
+Entities:
+[
+{{"id":"E1","text":"John","type":"PERSON"}},
+{{"id":"E2","text":"Microsoft","type":"ORGANIZATION"}},
+{{"id":"E3","text":"Seattle","type":"LOCATION"}}
+]
+
+Output:
+[
+{{
+"head":"E1",
+"tail":"E2",
+"type":"Work_For",
+"evidence":"works for Microsoft"
+}},
+{{
+"head":"E2",
+"tail":"E3",
+"type":"OrgBased_In",
+"evidence":"Microsoft in Seattle"
+}}
+]
+
+Negative example:
+
+Text:
+John visited Berlin.
+
+Entities:
+[
+{{"id":"E1","text":"John","type":"PERSON"}},
+{{"id":"E2","text":"Berlin","type":"LOCATION"}}
+]
+
+Output:
+[]
+
+Negative example:
+
+Text:
+Apple released a new product.
+
+Entities:
+[
+{{"id":"E1","text":"Apple","type":"ORGANIZATION"}}
+]
+
+Output:
+[]
+
+Negative example:
+
+Text:
+Canada's ambassador Yves Fortier spoke to reporters.
+
+Entities:
+[
+{{"id":"E1","text":"Yves Fortier","type":"PERSON"}},
+{{"id":"E2","text":"Canada","type":"LOCATION"}}
+]
+
+Output:
+[]
+
+Return only valid JSON.
+
+Text:
+{text}
+
+Entities:
+{entities}
