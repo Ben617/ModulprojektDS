@@ -14,8 +14,10 @@ ALLOWED_ENTITY_TYPES = {
 def extract_entities(document: Document, llm, prompt_path: str) -> list[Entity]:
     prompt = build_ner_prompt(document.text, prompt_path)
     raw_output = llm.generate(prompt)
-    data = parse_json_array(raw_output)
+    return parse_entities(raw_output)
 
+def parse_entities(raw_output: str) -> list[Entity]:
+    data = parse_json_array(raw_output)
     entities = []
 
     for i, item in enumerate(data):

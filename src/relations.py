@@ -14,20 +14,7 @@ ALLOWED_RELATIONS = {
 }
 
 
-def extract_relations(
-    document: Document,
-    entities: list[Entity],
-    llm,
-    prompt_path: str,
-) -> list[Relation]:
-    entities_json = json.dumps(
-        [entity.__dict__ for entity in entities],
-        ensure_ascii=False,
-        indent=2,
-    )
-
-    prompt = build_relation_prompt(document.text, entities_json, prompt_path)
-    raw_output = llm.generate(prompt)
+def parse_relations(raw_output: str, entities: list[Entity]) -> list[Relation]:
     data = parse_json_array(raw_output)
 
     valid_entity_ids = {entity.id for entity in entities}
@@ -60,3 +47,21 @@ def extract_relations(
         )
 
     return relations
+
+
+def extract_relations(
+    document: Document,
+    entities: list[Entity],
+    llm,
+    prompt_path: str,
+) -> list[Relation]:
+    entities_json = json.dumps(
+        [entity.__dict__ for entity in entities],
+        ensure_ascii=False,
+        indent=2,
+    )
+
+    prompt = build_relation_prompt(document.text, entities_json, prompt_path)
+    raw_output = llm.generate(prompt)
+
+    return parse_relations(raw_output, entities)

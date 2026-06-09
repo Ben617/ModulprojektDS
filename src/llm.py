@@ -23,6 +23,9 @@ class MockLLM:
 
         return "[]"
 
+    def generate_batch(self, prompts: list[str]) -> list[str]:
+        return [self.generate(prompt) for prompt in prompts]
+
 
 class VLLM:
     def __init__(self, model_name: str,tensor_parallel_size: int =1):
@@ -37,6 +40,10 @@ class VLLM:
     def generate(self, prompt: str) -> str:
         outputs = self.llm.generate([prompt], self.sampling_params)
         return outputs[0].outputs[0].text
+
+    def generate_batch(self, prompts: list[str]) -> list[str]:
+        outputs = self.llm.generate(prompts, self.sampling_params)
+        return [output.outputs[0].text for output in outputs]
 
 
 def create_llm(backend: str, model_name: str | None = None, tensor_parallel_size: int = 1,):

@@ -1,14 +1,16 @@
 import argparse
-
-from src.data_loader import load_documents, save_predictions
-from src.entities import extract_entities
-from src.llm import create_llm
-from src.relations import extract_relations
-from src.schemas import Prediction
-from tqdm import tqdm
-from src.evaluation import compute_metrics, relations_to_tuples
 import json
 from pathlib import Path
+
+from tqdm import tqdm
+
+from src.data_loader import load_documents, save_predictions
+from src.entities import parse_entities
+from src.evaluation import compute_metrics, relations_to_tuples
+from src.llm import create_llm
+from src.prompts import build_ner_prompt, build_relation_prompt
+from src.relations import parse_relations
+from src.schemas import Prediction
 
 def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None, limit: int | None, ner_prompt: str, relation_prompt: str,tensor_parallel_size) -> None:
     documents = load_documents(input_path)
@@ -17,12 +19,48 @@ def run(input_path: str, output_path: str, backend: str, model: str | None, gold
         documents = documents[:limit]
     llm = create_llm(backend, model,tensor_parallel_size)
 
+    # 1. Batch NER
+    ner_prompts = [
+        build_ner_prompt(document.text, ner_prompt)
+        for document in documents
+    ]
+
+    ner_outputs = llm.generate_batch(ner_prompts)
+
+    all_entities = [
+        parse_entities(output)
+        for output in ner_outputs
+    ]
+
+    # 2. Batch Relation Extraction
+    relation_prompts = [
+        build_relation_prompt(
+            document.text,
+            json.dumps(
+                [entity.__dict__ for entity in entities],
+                ensure_ascii=False,
+                indent=2,
+            ),
+            relation_prompt,
+        )
+        for document, entities in zip(documents, all_entities)
+    ]
+
+    relation_outputs = llm.generate_batch(relation_prompts)
+
+    all_relations = [
+        parse_relations(output, entities)
+        for output, entities in zip(relation_outputs, all_entities)
+    ]
+
+    # 3. Predictions bauen
     predictions = []
 
-    for document in tqdm(documents, desc="Processing documents"):
-        entities = extract_entities(document, llm,ner_prompt)
-        relations = extract_relations(document, entities, llm,relation_prompt)
-
+    for document, entities, relations in tqdm(
+            zip(documents, all_entities, all_relations),
+            total=len(documents),
+            desc="Building predictions",
+    ):
         prediction = Prediction(
             document_id=document.id,
             text=document.text,
@@ -31,14 +69,10 @@ def run(input_path: str, output_path: str, backend: str, model: str | None, gold
         )
 
         predictions.append(prediction.to_dict())
-
     save_predictions(predictions, output_path)
 
     # OPTIONAL EVALUATION
     if gold_path:
-        from src.evaluation import compute_metrics, relations_to_tuples
-        import json
-        from pathlib import Path
 
         if not Path(gold_path).exists():
             print(f"[WARN] Gold file not found: {gold_path}")
