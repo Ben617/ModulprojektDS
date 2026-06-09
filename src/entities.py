@@ -3,6 +3,14 @@ from src.prompts import build_ner_prompt
 from src.schemas import Document, Entity
 
 
+ALLOWED_ENTITY_TYPES = {
+    "PERSON",
+    "LOCATION",
+    "ORGANIZATION",
+    "OTHER",
+}
+
+
 def extract_entities(document: Document, llm, prompt_path: str) -> list[Entity]:
     prompt = build_ner_prompt(document.text, prompt_path)
     raw_output = llm.generate(prompt)
@@ -11,14 +19,20 @@ def extract_entities(document: Document, llm, prompt_path: str) -> list[Entity]:
     entities = []
 
     for i, item in enumerate(data):
-        if "text" not in item or "type" not in item:
+        text = item.get("text")
+        entity_type = item.get("type")
+
+        if not text or not entity_type:
+            continue
+
+        if entity_type not in ALLOWED_ENTITY_TYPES:
             continue
 
         entities.append(
             Entity(
                 id=item.get("id", f"E{i + 1}"),
-                text=item["text"],
-                type=item["type"],
+                text=text,
+                type=entity_type,
             )
         )
 
