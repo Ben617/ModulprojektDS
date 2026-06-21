@@ -26,12 +26,12 @@ PERUGIA, Italy (AP)
 
 Wrong:
 [
-  {"text":"Pope Benedict XVI","type":"PERSON"}
+  {{"text":"Pope Benedict XVI","type":"PERSON"}}
 ]
 
 Correct:
 [
-  {"text":"PERUGIA","type":"LOCATION"},
-  {"text":"Italy","type":"LOCATION"},
-  {"text":"AP","type":"ORGANIZATION"}
+  {{"text":"PERUGIA","type":"LOCATION"}},
+  {{"text":"Italy","type":"LOCATION"}},
+  {{"text":"AP","type":"ORGANIZATION"}}
 ]
