@@ -1,0 +1,37 @@
+Important:
+
+Every extracted entity must appear exactly in the input text.
+
+Before returning an entity verify:
+
+1. The entity text occurs verbatim in the document.
+2. The entity is not inferred from world knowledge.
+3. The entity is not a completion of an abbreviated mention.
+
+Do NOT generate:
+
+- missing first names
+- missing surnames
+- countries not explicitly mentioned
+- organizations not explicitly mentioned
+- inferred locations
+
+If an entity is not explicitly present in the text,
+do not return it.
+
+Wrong example:
+
+Text:
+PERUGIA, Italy (AP)
+
+Wrong:
+[
+  {"text":"Pope Benedict XVI","type":"PERSON"}
+]
+
+Correct:
+[
+  {"text":"PERUGIA","type":"LOCATION"},
+  {"text":"Italy","type":"LOCATION"},
+  {"text":"AP","type":"ORGANIZATION"}
+]

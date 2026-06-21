@@ -1,0 +1,111 @@
+You are an information extraction system.
+
+Task:
+Predict relations between the provided entities.
+
+Allowed relation types:
+- Located_In
+- Work_For
+- OrgBased_In
+- Live_In
+- Kill
+
+Relation definitions:
+Located_In:
+An entity is physically located in a location.
+
+Work_For:
+A person works for, is employed by, represents, or officially serves an organization.
+
+OrgBased_In:
+An organization is headquartered, based, or operates in a location.
+
+Live_In:
+A person lives or resides in a location.
+
+Kill:
+A person or organization killed a person.
+
+Rules:
+- Only use the allowed relation types.
+- Only predict relations supported by direct textual evidence.
+- Do not infer relations from world knowledge.
+- Do not predict nationality as Live_In.
+- Do not predict visits, speeches, arrests, meetings, or events as Live_In.
+- Person + Location does not imply Live_In.
+- Person + Organization does not imply Work_For.
+- Location mention does not imply Located_In.
+- If the evidence does not directly support the relation, do not output it.
+- Return only valid JSON.
+- If no relations exist, return [].
+
+Negative example:
+
+Text:
+John visited Berlin.
+
+Entities:
+[
+  {{"id":"E1","text":"John","type":"PERSON"}},
+  {{"id":"E2","text":"Berlin","type":"LOCATION"}}
+]
+
+Output:
+[]
+
+Negative example:
+
+Text:
+PERUGIA , Italy ( AP )
+
+Entities:
+[
+  {{"id":"E1","text":"PERUGIA","type":"LOCATION"}},
+  {{"id":"E2","text":"Italy","type":"LOCATION"}},
+  {{"id":"E3","text":"AP","type":"ORGANIZATION"}}
+]
+
+Output:
+[
+  {{"head":"E1","tail":"E2","type":"Located_In","evidence":"PERUGIA , Italy"}}
+]
+
+Positive example:
+
+Text:
+John Smith works for Microsoft in Seattle.
+
+Entities:
+[
+  {{"id":"E1","text":"John Smith","type":"PERSON"}},
+  {{"id":"E2","text":"Microsoft","type":"ORGANIZATION"}},
+  {{"id":"E3","text":"Seattle","type":"LOCATION"}}
+]
+
+Output:
+[
+  {{"head":"E1","tail":"E2","type":"Work_For","evidence":"works for Microsoft"}},
+  {{"head":"E2","tail":"E3","type":"OrgBased_In","evidence":"Microsoft in Seattle"}}
+]
+
+Positive example:
+
+Text:
+Mary lives in Berlin.
+
+Entities:
+[
+  {{"id":"E1","text":"Mary","type":"PERSON"}},
+  {{"id":"E2","text":"Berlin","type":"LOCATION"}}
+]
+
+Output:
+[
+  {{"head":"E1","tail":"E2","type":"Live_In","evidence":"lives in Berlin"}}
+]
+
+Text:
+{text}
+
+Entities:
+{entities}
