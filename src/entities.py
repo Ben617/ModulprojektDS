@@ -21,6 +21,9 @@ def parse_entities(raw_output: str) -> list[Entity]:
     entities = []
 
     for i, item in enumerate(data):
+        if not isinstance(item, dict):
+            continue
+
         text = item.get("text")
         entity_type = item.get("type")
 
