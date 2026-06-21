@@ -10,27 +10,53 @@ from src.evaluation import compute_metrics, relations_to_tuples
 from src.llm import create_llm
 from src.prompts import build_ner_prompt, build_relation_prompt
 from src.relations import parse_relations
-from src.schemas import Prediction
+from src.schemas import Prediction, Entity
 
-def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None, limit: int | None, ner_prompt: str, relation_prompt: str,tensor_parallel_size) -> None:
+
+def run(input_path: str, output_path: str, backend: str, model: str | None, gold_path: str | None, limit: int | None, ner_prompt: str, relation_prompt: str,tensor_parallel_size, gold_entities: bool,) -> None:
     documents = load_documents(input_path)
+
+    gold_data = None
+    gold_map = {}
+
+    if gold_path:
+        if not Path(gold_path).exists():
+            print(f"[WARN] Gold file not found: {gold_path}")
+        else:
+            gold_data = json.loads(Path(gold_path).read_text())
+            gold_map = {g["document_id"]: g for g in gold_data}
 
     if limit is not None:
         documents = documents[:limit]
     llm = create_llm(backend, model,tensor_parallel_size)
 
-    # 1. Batch NER
-    ner_prompts = [
-        build_ner_prompt(document.text, ner_prompt)
-        for document in documents
-    ]
+    if gold_entities:
+        if not gold_path:
+            raise ValueError("--gold-entities requires --gold")
 
-    ner_outputs = llm.generate_batch(ner_prompts)
+        all_entities = [
+            [
+                Entity(
+                    id=e["id"],
+                    text=e["text"],
+                    type=e["type"],
+                )
+                for e in gold_map[document.id].get("entities", [])
+            ]
+            for document in documents
+        ]
+    else:
+        ner_prompts = [
+            build_ner_prompt(document.text, ner_prompt)
+            for document in documents
+        ]
 
-    all_entities = [
-        parse_entities(output)
-        for output in ner_outputs
-    ]
+        ner_outputs = llm.generate_batch(ner_prompts)
+
+        all_entities = [
+            parse_entities(output)
+            for output in ner_outputs
+        ]
 
     # 2. Batch Relation Extraction
     relation_prompts = [
@@ -119,6 +145,11 @@ def main() -> None:
     parser.add_argument("--ner-prompt", default="prompts/ner_prompt.txt")
     parser.add_argument("--relation-prompt", default="prompts/relation_prompt.txt")
     parser.add_argument("--tp", type=int, default=1)
+    parser.add_argument(
+        "--gold-entities",
+        action="store_true",
+        help="Use entities from gold file instead of predicted entities",
+    )
     args = parser.parse_args()
 
     run(
@@ -130,7 +161,8 @@ def main() -> None:
         limit=args.limit,
         ner_prompt=args.ner_prompt,
         relation_prompt=args.relation_prompt,
-        tensor_parallel_size=args.tp
+        tensor_parallel_size=args.tpm,
+        gold_entities=args.gold_entities,
     )
 
 
