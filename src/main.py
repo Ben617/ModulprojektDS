@@ -161,7 +161,7 @@ def main() -> None:
         limit=args.limit,
         ner_prompt=args.ner_prompt,
         relation_prompt=args.relation_prompt,
-        tensor_parallel_size=args.tpm,
+        tensor_parallel_size=args.tp,
         gold_entities=args.gold_entities,
     )
 
