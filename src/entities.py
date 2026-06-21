@@ -14,9 +14,9 @@ ALLOWED_ENTITY_TYPES = {
 def extract_entities(document: Document, llm, prompt_path: str) -> list[Entity]:
     prompt = build_ner_prompt(document.text, prompt_path)
     raw_output = llm.generate(prompt)
-    return parse_entities(raw_output)
+    return parse_entities(raw_output,document.text)
 
-def parse_entities(raw_output: str) -> list[Entity]:
+def parse_entities(raw_output: str, document_text :str) -> list[Entity]:
     data = parse_json_array(raw_output)
     entities = []
 
@@ -25,6 +25,9 @@ def parse_entities(raw_output: str) -> list[Entity]:
         entity_type = item.get("type")
 
         if not text or not entity_type:
+            continue
+
+        if text not in document_text:
             continue
 
         if entity_type not in ALLOWED_ENTITY_TYPES:

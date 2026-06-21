@@ -28,8 +28,8 @@ def run(input_path: str, output_path: str, backend: str, model: str | None, gold
     ner_outputs = llm.generate_batch(ner_prompts)
 
     all_entities = [
-        parse_entities(output)
-        for output in ner_outputs
+        parse_entities(output, document.text)
+        for output, document in zip(ner_outputs, documents)
     ]
 
     # 2. Batch Relation Extraction
