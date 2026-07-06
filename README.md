@@ -69,11 +69,7 @@ python -m src.main \
   --relation-prompt prompts/relation/v1_baseline.txt
 ```
 
-Alternativ als Einzeiler:
 
-```bash
-python -m src.main --input data/sample.json --output outputs/predictions_mock.json --backend mock --limit 5 --ner-prompt prompts/ner/v1_baseline.txt --relation-prompt prompts/relation/v1_baseline.txt
-```
 
 Beispielausgabe:
 
