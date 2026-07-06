@@ -1,291 +1,281 @@
-# Relation Extraction mit vLLM
+# Information Extraction Pipeline
 
-Dieses Projekt implementiert eine zweistufige Pipeline für Relation Extraction:
+Dieses Projekt führt eine zweistufige Information-Extraction-Pipeline aus:
 
-1. **Named Entity Recognition (NER)**
-2. **Relation Prediction** zwischen erkannten oder vorgegebenen Entities
+1. Named Entity Recognition (NER)
+2. Relation Extraction
 
-Die Pipeline kann entweder mit einem Mock-Backend ohne GPU getestet oder mit vLLM auf einer GPU ausgeführt werden.
+Die Pipeline kann entweder mit einem Mock-Backend für schnelle lokale Tests oder mit einem echten vLLM-Backend für reale Modellläufe ausgeführt werden.
 
----
-
-## Setup mit uv
-
-Virtuelle Umgebung erstellen:
-
-```bash
-uv venv
-```
-
-Virtuelle Umgebung aktivieren:
-
-```bash
-source .venv/bin/activate
-```
-
-Abhängigkeiten installieren:
-
-```bash
-uv pip install -r requirements.txt
-```
-
-Falls das Projekt als Package installiert werden soll:
-
-```bash
-uv pip install -e .
-```
-
----
-
-## CoNLL04 exportieren
-
-Vor der Ausführung kann der CoNLL04-Datensatz exportiert werden:
-
-```bash
-uv run python -m src.export_conll04 --split test
-```
-
-Dabei werden typischerweise Dateien wie diese erzeugt:
+## Projektstruktur
 
 ```text
-data/conll04_test.json
-data/conll04_test_gold.json
+.
+├── data/
+│   └── sample.json
+├── outputs/
+│   └── predictions_mock.json
+├── prompts/
+│   ├── ner/
+│   │   ├── v1_baseline.txt
+│   │   ├── v2_definitions.txt
+│   │   └── v3_fewshot.txt
+│   └── relation/
+│       ├── v1_baseline.txt
+│       ├── v2_definitions.txt
+│       ├── v3_fewshot.txt
+│       └── v4_candidate_reasoning.txt
+├── src/
+│   ├── data_loader.py
+│   ├── entities.py
+│   ├── evaluation.py
+│   ├── llm.py
+│   ├── prompts.py
+│   ├── relations.py
+│   ├── schemas.py
+│   └── main.py
+└── README.md
 ```
 
----
+## Installation
 
-## Pipeline ausführen
-
-Die Hauptpipeline wird über `src.main` gestartet.
-
-### Lokaler Test ohne GPU
-
-Für einen schnellen Test ohne GPU kann das Mock-Backend verwendet werden:
+Das Projekt verwendet `uv`.
 
 ```bash
-uv run python -m src.main \
+uv sync
+```
+
+Danach sollte die virtuelle Umgebung aktiviert sein oder über `uv run` automatisch verwendet werden.
+
+## Ausführung
+
+Das Projekt wird als Python-Modul über `src.main` gestartet.
+
+```bash
+python -m src.main [OPTIONEN]
+```
+
+## Mock-Durchlauf
+
+Der Mock-Durchlauf eignet sich zum Testen der Pipeline ohne echtes LLM.
+
+```bash
+python -m src.main \
+  --input data/sample.json \
+  --output outputs/predictions_mock.json \
   --backend mock \
-  --input data/conll04_test.json \
-  --output outputs/mock_conll04_test_limit5.json \
-  --gold data/conll04_test_gold.json \
-  --limit 5
+  --limit 5 \
+  --ner-prompt prompts/ner/v1_baseline.txt \
+  --relation-prompt prompts/relation/v1_baseline.txt
 ```
 
----
-
-## vLLM-Test auf GPU
-
-Für die Ausführung mit vLLM wird ein Modell angegeben:
+Alternativ als Einzeiler:
 
 ```bash
-uv run python -m src.main \
-  --backend vllm \
-  --model mistralai/Mistral-7B-Instruct-v0.3 \
-  --input data/conll04_test.json \
-  --output outputs/vllm_conll04_test.json \
-  --gold data/conll04_test_gold.json \
-  --limit 20
+python -m src.main --input data/sample.json --output outputs/predictions_mock.json --backend mock --limit 5 --ner-prompt prompts/ner/v1_baseline.txt --relation-prompt prompts/relation/v1_baseline.txt
 ```
 
----
-
-## Tensor Parallelism
-
-Für größere Modelle kann Tensor Parallelism über `--tp` gesetzt werden:
-
-```bash
-uv run python -m src.main \
-  --backend vllm \
-  --model mistralai/Mistral-7B-Instruct-v0.3 \
-  --input data/conll04_test.json \
-  --output outputs/vllm_conll04_test.json \
-  --gold data/conll04_test_gold.json \
-  --limit 20 \
-  --tp 2
-```
-
-Standardwert:
+Beispielausgabe:
 
 ```text
---tp 1
+Building predictions: 100%|██████████████████████████████████| 1/1 [00:00<00:00, 24105.20it/s]
 ```
 
----
-
-## Gold-Entities verwenden
-
-Standardmäßig führt die Pipeline zuerst NER aus und verwendet anschließend die vorhergesagten Entities für die Relation Extraction.
-
-Alternativ können die Entities direkt aus der Gold-Datei verwendet werden. Das ist nützlich, wenn nur die Relation Extraction evaluiert werden soll:
-
-```bash
-uv run python -m src.main \
-  --backend vllm \
-  --model mistralai/Mistral-7B-Instruct-v0.3 \
-  --input data/conll04_test.json \
-  --output outputs/vllm_conll04_test_gold_entities.json \
-  --gold data/conll04_test_gold.json \
-  --limit 20 \
-  --gold-entities
-```
-
-Wichtig: `--gold-entities` benötigt immer zusätzlich `--gold`.
-
----
-
-## Eigene Prompts verwenden
-
-Die NER- und Relation-Prompts können über eigene Prompt-Dateien gesetzt werden:
-
-```bash
-uv run python -m src.main \
-  --backend vllm \
-  --model mistralai/Mistral-7B-Instruct-v0.3 \
-  --input data/conll04_test.json \
-  --output outputs/vllm_custom_prompts.json \
-  --gold data/conll04_test_gold.json \
-  --ner-prompt prompts/ner_prompt.txt \
-  --relation-prompt prompts/relation_prompt.txt
-```
-
-Standardwerte:
+Die erzeugten Predictions werden anschließend in folgender Datei gespeichert:
 
 ```text
---ner-prompt prompts/ner_prompt.txt
---relation-prompt prompts/relation_prompt.txt
+outputs/predictions_mock.json
 ```
 
----
+## Realer Durchlauf mit vLLM
 
-## Argumente
+Für einen echten Modelllauf wird das Backend `vllm` verwendet. Zusätzlich muss ein Modell angegeben werden.
 
-| Argument            | Beschreibung                                          | Standard                      |
-| ------------------- | ----------------------------------------------------- | ----------------------------- |
-| `--input`           | Pfad zur Eingabe-Datei                                | `data/sample.json`            |
-| `--output`          | Pfad zur Ausgabe-Datei                                | `outputs/predictions.json`    |
-| `--backend`         | Backend für die Generierung: `mock` oder `vllm`       | `mock`                        |
-| `--model`           | Modellname für vLLM                                   | `None`                        |
-| `--gold`            | Pfad zur Gold-Datei für Evaluation oder Gold-Entities | `None`                        |
-| `--limit`           | Begrenzung der Anzahl der Dokumente                   | `None`                        |
-| `--ner-prompt`      | Pfad zur NER-Prompt-Datei                             | `prompts/ner_prompt.txt`      |
-| `--relation-prompt` | Pfad zur Relation-Prompt-Datei                        | `prompts/relation_prompt.txt` |
-| `--tp`              | Tensor Parallel Size für vLLM                         | `1`                           |
-| `--gold-entities`   | Verwendet Gold-Entities statt vorhergesagter Entities | deaktiviert                   |
-
----
-
-## Output
-
-Die Pipeline erzeugt eine JSON-Datei mit Predictions.
-
-Jede Prediction enthält:
-
-```json
-{
-  "document_id": "...",
-  "text": "...",
-  "entities": [
-    {
-      "id": "...",
-      "text": "...",
-      "type": "..."
-    }
-  ],
-  "relations": [
-    {
-      "head": "...",
-      "tail": "...",
-      "type": "..."
-    }
-  ]
-}
+```bash
+python -m src.main \
+  --input data/sample.json \
+  --output outputs/predictions_vllm.json \
+  --backend vllm \
+  --model <MODEL_NAME_OR_PATH> \
+  --ner-prompt prompts/ner/v3_fewshot.txt \
+  --relation-prompt prompts/relation/v4_candidate_reasoning.txt
 ```
-
-Der genaue Aufbau der Relationen hängt von den verwendeten Schemas und Parsern in `src.schemas` und `src.relations` ab.
-
----
-
-## Evaluation
-
-Wenn `--gold` gesetzt ist, wird nach der Prediction automatisch eine Evaluation ausgeführt.
-
-Dabei werden die vorhergesagten Relationen und die Gold-Relationen verglichen.
-
-Ausgegeben werden:
-
-* Precision
-* Recall
-* F1
 
 Beispiel:
 
 ```bash
-uv run python -m src.main \
-  --backend mock \
-  --input data/conll04_test.json \
-  --output outputs/mock_eval.json \
-  --gold data/conll04_test_gold.json \
-  --limit 5
+python -m src.main \
+  --input data/sample.json \
+  --output outputs/predictions_vllm.json \
+  --backend vllm \
+  --model mistralai/Mistral-7B-Instruct-v0.3 \
+  --ner-prompt prompts/ner/v3_fewshot.txt \
+  --relation-prompt prompts/relation/v4_candidate_reasoning.txt
 ```
 
-Am Ende erscheint eine Ausgabe wie:
+## Realer Durchlauf mit Tensor Parallelism
+
+Wenn mehrere GPUs genutzt werden sollen, kann `--tp` gesetzt werden.
+
+```bash
+python -m src.main \
+  --input data/sample.json \
+  --output outputs/predictions_vllm_tp2.json \
+  --backend vllm \
+  --model <MODEL_NAME_OR_PATH> \
+  --tp 2 \
+  --ner-prompt prompts/ner/v3_fewshot.txt \
+  --relation-prompt prompts/relation/v4_candidate_reasoning.txt
+```
+
+## Gold-Entities verwenden
+
+Mit `--gold-entities` wird die NER-Stufe übersprungen. Stattdessen werden die Entities aus der Gold-Datei verwendet. Danach wird nur noch Relation Extraction ausgeführt.
+
+```bash
+python -m src.main \
+  --input data/sample.json \
+  --output outputs/predictions_gold_entities.json \
+  --backend vllm \
+  --model <MODEL_NAME_OR_PATH> \
+  --gold data/gold.json \
+  --gold-entities \
+  --relation-prompt prompts/relation/v4_candidate_reasoning.txt
+```
+
+Wichtig: `--gold-entities` benötigt immer zusätzlich den Parameter `--gold`.
+
+## Evaluation
+
+Wenn eine Gold-Datei übergeben wird, wird nach dem Durchlauf automatisch eine Evaluation der Relationen berechnet.
+
+```bash
+python -m src.main \
+  --input data/sample.json \
+  --output outputs/predictions_eval.json \
+  --backend mock \
+  --gold data/gold.json \
+  --limit 5 \
+  --ner-prompt prompts/ner/v1_baseline.txt \
+  --relation-prompt prompts/relation/v1_baseline.txt
+```
+
+Beispielausgabe:
 
 ```text
 Evaluation:
 {
-  "precision": ...,
-  "recall": ...,
-  "f1": ...
+  ...
 }
 ```
 
----
+## Prompt-Versionen
 
-## Typischer Workflow
+Die verwendeten Prompts können über `--ner-prompt` und `--relation-prompt` ausgewählt werden.
 
-```bash
-# 1. Umgebung erstellen und Abhängigkeiten installieren
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
+### NER-Prompts
 
-# 2. Daten exportieren
-uv run python -m src.export_conll04 --split test
-
-# 3. Mock-Test ausführen
-uv run python -m src.main \
-  --backend mock \
-  --input data/conll04_test.json \
-  --output outputs/mock_conll04_test_limit5.json \
-  --gold data/conll04_test_gold.json \
-  --limit 5
-
-# 4. vLLM-Test ausführen
-uv run python -m src.main \
-  --backend vllm \
-  --model mistralai/Mistral-7B-Instruct-v0.3 \
-  --input data/conll04_test.json \
-  --output outputs/vllm_conll04_test.json \
-  --gold data/conll04_test_gold.json \
-  --limit 20
-
-# 5. Relation Extraction mit Gold-Entities testen
-uv run python -m src.main \
-  --backend vllm \
-  --model mistralai/Mistral-7B-Instruct-v0.3 \
-  --input data/conll04_test.json \
-  --output outputs/vllm_conll04_test_gold_entities.json \
-  --gold data/conll04_test_gold.json \
-  --limit 20 \
-  --gold-entities
+```text
+prompts/ner/v1_baseline.txt
+prompts/ner/v2_definitions.txt
+prompts/ner/v3_fewshot.txt
 ```
 
----
+### Relation-Prompts
+
+```text
+prompts/relation/v1_baseline.txt
+prompts/relation/v2_definitions.txt
+prompts/relation/v3_fewshot.txt
+prompts/relation/v4_candidate_reasoning.txt
+```
+
+## Beispiele für Prompt-Vergleiche
+
+### Baseline
+
+```bash
+python -m src.main \
+  --input data/sample.json \
+  --output outputs/predictions_baseline.json \
+  --backend vllm \
+  --model <MODEL_NAME_OR_PATH> \
+  --ner-prompt prompts/ner/v1_baseline.txt \
+  --relation-prompt prompts/relation/v1_baseline.txt
+```
+
+### Definitions-Prompts
+
+```bash
+python -m src.main \
+  --input data/sample.json \
+  --output outputs/predictions_definitions.json \
+  --backend vllm \
+  --model <MODEL_NAME_OR_PATH> \
+  --ner-prompt prompts/ner/v2_definitions.txt \
+  --relation-prompt prompts/relation/v2_definitions.txt
+```
+
+### Few-shot NER und Candidate Reasoning
+
+```bash
+python -m src.main \
+  --input data/sample.json \
+  --output outputs/predictions_fewshot_reasoning.json \
+  --backend vllm \
+  --model <MODEL_NAME_OR_PATH> \
+  --ner-prompt prompts/ner/v3_fewshot.txt \
+  --relation-prompt prompts/relation/v4_candidate_reasoning.txt
+```
+
+## Parameterübersicht
+
+| Parameter | Beschreibung | Default |
+|---|---|---|
+| `--input` | Pfad zur Input-Datei | `data/sample.json` |
+| `--output` | Pfad zur Output-Datei | `outputs/predictions.json` |
+| `--backend` | Backend für die Generierung: `mock` oder `vllm` | `mock` |
+| `--model` | Modellname oder Modellpfad für vLLM | `None` |
+| `--gold` | Pfad zur Gold-Datei für Evaluation oder Gold-Entities | `None` |
+| `--limit` | Optionales Limit für die Anzahl der Dokumente | `None` |
+| `--ner-prompt` | Pfad zum NER-Prompt | `prompts/ner_prompt.txt` |
+| `--relation-prompt` | Pfad zum Relation-Prompt | `prompts/relation_prompt.txt` |
+| `--tp` | Tensor Parallel Size für vLLM | `1` |
+| `--gold-entities` | Nutzt Gold-Entities statt vorhergesagter Entities | deaktiviert |
+
+## Output-Format
+
+Die Predictions werden als JSON gespeichert.
+
+Beispiel:
+
+```json
+[
+  {
+    "document_id": "doc_1",
+    "text": "...",
+    "entities": [
+      {
+        "id": "E1",
+        "text": "...",
+        "type": "..."
+      }
+    ],
+    "relations": [
+      {
+        "head": "E1",
+        "tail": "E2",
+        "type": "..."
+      }
+    ]
+  }
+]
+```
 
 ## Hinweise
 
-Wenn `--gold` angegeben wird, aber die Datei nicht existiert, gibt das Programm eine Warnung aus.
-
-Wenn `--gold-entities` verwendet wird, muss `--gold` gesetzt sein, da die Entities aus der Gold-Datei geladen werden.
-
-Die Pipeline verarbeitet NER- und Relation-Prompts batchweise über `llm.generate_batch`.
+- Für schnelle Tests sollte `--backend mock` verwendet werden.
+- Für echte Läufe muss `--backend vllm` zusammen mit `--model` verwendet werden.
+- Die Prompt-Pfade sollten explizit angegeben werden, da die Defaults in `main.py` möglicherweise nicht zur aktuellen Ordnerstruktur passen.
+- Für reproduzierbare Experimente sollten Output-Dateien nach Backend, Modell und Prompt-Version benannt werden.
+- Bei größeren Modellen kann `--tp` erhöht werden, wenn mehrere GPUs verfügbar sind.
